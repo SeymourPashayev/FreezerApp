@@ -16,9 +16,9 @@ import SwiftUI
 struct AppTabNavigationCoach: View {
     
     enum Tab{
+        case recentlyAdded
         case dashboard
-        case trainees
-        case backlog
+        case freezer
     }
     
     @State private var selection: Tab = .dashboard
@@ -28,46 +28,46 @@ struct AppTabNavigationCoach: View {
             
             // Dashboard Navigation
             NavigationView {
-                DashboardView()
+                RecentlyAddedView()
             }
             .tabItem{
-                let menuText = Text("Dashboard", comment: "General Overview")
+                let menuText = Text("Recent", comment: "Recently Added")
                 Label {
                     menuText
                 } icon: {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "clock")
                 }
             }
-            .tag(Tab.dashboard)
+            .tag(Tab.recentlyAdded)
             
             
             // Trainees Navigation
             NavigationView {
-                TraineesView()
+                DashboardView()
             }
             .tabItem{
-                let menuText = Text("Trainees", comment: "List of Trainees")
+                let menuText = Text("Dashboard", comment: "List of all items soon to expire")
                 Label {
                     menuText
                 } icon: {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "house.fill")
                 }
             }
-            .tag(Tab.trainees)
+            .tag(Tab.dashboard)
             
             // Backlog Navigation
             NavigationView {
-                BacklogView()
+                FreezerView()
             }
             .tabItem{
-                let menuText = Text("Backlog", comment: "List of Workouts(Exer.)")
+                let menuText = Text("Freezer", comment: "List of all freezer items")
                 Label {
                     menuText
                 } icon: {
-                    Image(systemName: "list.bullet")
+                    Image(systemName: "snowflake")
                 }
             }
-            .tag(Tab.backlog)
+            .tag(Tab.freezer)
             
         }
     }
