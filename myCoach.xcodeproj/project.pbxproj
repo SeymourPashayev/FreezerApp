@@ -16,7 +16,7 @@
 		92582C0727A4072D00CA6320 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92582C0627A4072D00CA6320 /* Preview Assets.xcassets */; };
 		92582C1127A40A5300CA6320 /* AppTabNavigationCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582C1027A40A5300CA6320 /* AppTabNavigationCoach.swift */; };
 		92582C1327A40BE100CA6320 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582C1227A40BE100CA6320 /* DashboardView.swift */; };
-		92582C1527A40CC500CA6320 /* AppSidebarNavigationCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582C1427A40CC500CA6320 /* AppSidebarNavigationCoach.swift */; };
+		92A6577A2813269300790358 /* Freezer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A657792813269300790358 /* Freezer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +30,7 @@
 		92582C0627A4072D00CA6320 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		92582C1027A40A5300CA6320 /* AppTabNavigationCoach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabNavigationCoach.swift; sourceTree = "<group>"; };
 		92582C1227A40BE100CA6320 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
-		92582C1427A40CC500CA6320 /* AppSidebarNavigationCoach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSidebarNavigationCoach.swift; sourceTree = "<group>"; };
+		92A657792813269300790358 /* Freezer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Freezer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				92371AEC28123F9500805BEA /* FreezerItem.swift */,
+				92A657792813269300790358 /* Freezer.swift */,
 			);
 			path = "Model Objects";
 			sourceTree = "<group>";
@@ -104,7 +105,6 @@
 			children = (
 				92582C0127A4072C00CA6320 /* ContentView.swift */,
 				92582C1027A40A5300CA6320 /* AppTabNavigationCoach.swift */,
-				92582C1427A40CC500CA6320 /* AppSidebarNavigationCoach.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -180,9 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92371AE628123B0D00805BEA /* FreezerView.swift in Sources */,
-				92582C1527A40CC500CA6320 /* AppSidebarNavigationCoach.swift in Sources */,
 				92371AE828123B5800805BEA /* RecentlyAddedView.swift in Sources */,
 				92582C0227A4072C00CA6320 /* ContentView.swift in Sources */,
+				92A6577A2813269300790358 /* Freezer.swift in Sources */,
 				92582C1327A40BE100CA6320 /* DashboardView.swift in Sources */,
 				92582C0027A4072C00CA6320 /* myCoachApp.swift in Sources */,
 				92371AED28123F9500805BEA /* FreezerItem.swift in Sources */,
