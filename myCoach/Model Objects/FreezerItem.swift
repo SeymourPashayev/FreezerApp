@@ -8,17 +8,45 @@
 import Foundation
 
 // FreezerItem Object Itself
-struct FreezerItem: Identifiable{
-    let id = UUID();
-    var title: String;
-    var expirationDate: String;
+class FreezerItem: Identifiable, ObservableObject, Codable{
+    var id = UUID();
+    @Published var title: String;
+    @Published var expirationDate: String;
     //TODO: Figure out a way to use date instead of a string here
     //TODO: Research how barcodes work and how to add an item based on barcode
     
+    /**Enumeration Protocol Coding Keys (For Encoding/Saving)**/
+    enum CodeKeys: CodingKey{
+        case title
+        case expirationDate
+    }
+    
+    /**Basic constructor*/
     init(title: String, expirationDate: String){
         self.title = title;
         self.expirationDate = expirationDate;
     }
+    
+    /**Test init for test item creation with null init**/
+    init(){
+        self.title = "testItem-NullInit";
+        self.expirationDate = "textExpdate-NullInit";
+    }
+    
+    /** Loads the data with JSON decoder */
+    required init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodeKeys.self)
+        title = try container.decode(String.self, forKey: .title)
+        expirationDate = try container.decode(String.self, forKey: .expirationDate)
+    }
+    
+    /** Saves the data with JSON encoder*/
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodeKeys.self)
+        try container.encode(title, forKey: .title)
+        try container.encode(expirationDate, forKey: .expirationDate)
+    }
+    
 }
 
 

@@ -17,6 +17,7 @@
 		92582C1127A40A5300CA6320 /* AppTabNavigationCoach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582C1027A40A5300CA6320 /* AppTabNavigationCoach.swift */; };
 		92582C1327A40BE100CA6320 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582C1227A40BE100CA6320 /* DashboardView.swift */; };
 		92A6577A2813269300790358 /* Freezer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A657792813269300790358 /* Freezer.swift */; };
+		92C47FA12814F5270014F1F8 /* FreezerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C47FA02814F5270014F1F8 /* FreezerItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		92582C1027A40A5300CA6320 /* AppTabNavigationCoach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabNavigationCoach.swift; sourceTree = "<group>"; };
 		92582C1227A40BE100CA6320 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		92A657792813269300790358 /* Freezer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Freezer.swift; sourceTree = "<group>"; };
+		92C47FA02814F5270014F1F8 /* FreezerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +51,7 @@
 			children = (
 				92582C1227A40BE100CA6320 /* DashboardView.swift */,
 				92371AE528123B0D00805BEA /* FreezerView.swift */,
+				92C47FA02814F5270014F1F8 /* FreezerItemView.swift */,
 				92371AE728123B5800805BEA /* RecentlyAddedView.swift */,
 			);
 			path = Views;
@@ -180,6 +183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				92371AE628123B0D00805BEA /* FreezerView.swift in Sources */,
+				92C47FA12814F5270014F1F8 /* FreezerItemView.swift in Sources */,
 				92371AE828123B5800805BEA /* RecentlyAddedView.swift in Sources */,
 				92582C0227A4072C00CA6320 /* ContentView.swift in Sources */,
 				92A6577A2813269300790358 /* Freezer.swift in Sources */,
