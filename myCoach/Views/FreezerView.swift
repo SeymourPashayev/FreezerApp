@@ -7,35 +7,33 @@
 
 import SwiftUI
 
+
+
 struct FreezerView: View {
     
     // Array that holds freezerItems (Freezer)
-    @StateObject var freezer = Freezer(freezerName: "Freezer");
+    @EnvironmentObject var freezer: Freezer
+    
     
     var body: some View {
-        NavigationView{
-            List{
-                ForEach(freezer.items) { item in
-                    Text(item.title);
+        List {
+            ForEach(freezer.items.indexed()) { indexedItem in
+                VStack{
+                    NavigationLink(destination: FreezerItemView(freezerItem: indexedItem.element).environmentObject(freezer)) {
+                        Text(indexedItem.title)
+                    }
                 }
-                .onDelete(perform: freezer.removeItems)
             }
+            .onDelete(perform: freezer.removeItems)
         }
-        .navigationTitle("Freezer")
         .toolbar{
-            Button {
-                freezer.addTestItem();
-            } label: {
+            NavigationLink(destination: FreezerAddItemView().environmentObject(freezer)){
                 Image(systemName: "plus");
             }
         }
+        
     }
-    
-    // FIXME: There's a UI error that I cannot understand when you open FreezerView on the phone. It does not happen on canvas
-    // It might have something to do with having two navigation views overlapping: one in FreezerView and the other in the AppTabNavigationCoach/ContentView
-    
 }
-
 struct FreezerView_Previews: PreviewProvider {
     static var previews: some View {
         FreezerView()

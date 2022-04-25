@@ -18,6 +18,9 @@
 		92582C1327A40BE100CA6320 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92582C1227A40BE100CA6320 /* DashboardView.swift */; };
 		92A6577A2813269300790358 /* Freezer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A657792813269300790358 /* Freezer.swift */; };
 		92C47FA12814F5270014F1F8 /* FreezerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C47FA02814F5270014F1F8 /* FreezerItemView.swift */; };
+		92FB0E4E281705FC00EFE1EE /* ArrayMobilization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FB0E4D281705FC00EFE1EE /* ArrayMobilization.swift */; };
+		92FB0E50281717A100EFE1EE /* FreezerAddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FB0E4F281717A100EFE1EE /* FreezerAddItemView.swift */; };
+		92FB0E5228171E3A00EFE1EE /* ViewDidLoadModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FB0E5128171E3A00EFE1EE /* ViewDidLoadModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		92582C1227A40BE100CA6320 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		92A657792813269300790358 /* Freezer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Freezer.swift; sourceTree = "<group>"; };
 		92C47FA02814F5270014F1F8 /* FreezerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerItemView.swift; sourceTree = "<group>"; };
+		92FB0E4D281705FC00EFE1EE /* ArrayMobilization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayMobilization.swift; sourceTree = "<group>"; };
+		92FB0E4F281717A100EFE1EE /* FreezerAddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreezerAddItemView.swift; sourceTree = "<group>"; };
+		92FB0E5128171E3A00EFE1EE /* ViewDidLoadModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDidLoadModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,7 @@
 				92582C1227A40BE100CA6320 /* DashboardView.swift */,
 				92371AE528123B0D00805BEA /* FreezerView.swift */,
 				92C47FA02814F5270014F1F8 /* FreezerItemView.swift */,
+				92FB0E4F281717A100EFE1EE /* FreezerAddItemView.swift */,
 				92371AE728123B5800805BEA /* RecentlyAddedView.swift */,
 			);
 			path = Views;
@@ -86,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				92582BFF27A4072C00CA6320 /* myCoachApp.swift */,
+				92FB0E4C281705B100EFE1EE /* ArrayMobilization */,
 				92371AEB28123CDC00805BEA /* Model Objects */,
 				92371AE428123AE300805BEA /* Views */,
 				92582C0D27A407E200CA6320 /* Navigation */,
@@ -110,6 +118,15 @@
 				92582C1027A40A5300CA6320 /* AppTabNavigationCoach.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		92FB0E4C281705B100EFE1EE /* ArrayMobilization */ = {
+			isa = PBXGroup;
+			children = (
+				92FB0E4D281705FC00EFE1EE /* ArrayMobilization.swift */,
+				92FB0E5128171E3A00EFE1EE /* ViewDidLoadModifier.swift */,
+			);
+			path = ArrayMobilization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,11 +200,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				92371AE628123B0D00805BEA /* FreezerView.swift in Sources */,
+				92FB0E50281717A100EFE1EE /* FreezerAddItemView.swift in Sources */,
 				92C47FA12814F5270014F1F8 /* FreezerItemView.swift in Sources */,
+				92FB0E5228171E3A00EFE1EE /* ViewDidLoadModifier.swift in Sources */,
 				92371AE828123B5800805BEA /* RecentlyAddedView.swift in Sources */,
 				92582C0227A4072C00CA6320 /* ContentView.swift in Sources */,
 				92A6577A2813269300790358 /* Freezer.swift in Sources */,
 				92582C1327A40BE100CA6320 /* DashboardView.swift in Sources */,
+				92FB0E4E281705FC00EFE1EE /* ArrayMobilization.swift in Sources */,
 				92582C0027A4072C00CA6320 /* myCoachApp.swift in Sources */,
 				92371AED28123F9500805BEA /* FreezerItem.swift in Sources */,
 				92582C1127A40A5300CA6320 /* AppTabNavigationCoach.swift in Sources */,

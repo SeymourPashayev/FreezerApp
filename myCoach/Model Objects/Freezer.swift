@@ -29,6 +29,7 @@ class Freezer: ObservableObject, Codable {
         self.freezerName = freezerName;
     }
     
+    
     /** Adds a test item to the list of items. For debugging */
     func addTestItem(){
         let testItem = FreezerItem(title:"testItem", expirationDate: "testExpirationDate");
@@ -78,7 +79,6 @@ class Freezer: ObservableObject, Codable {
         var container = encoder.container(keyedBy: CodeKeys.self)
         try container.encode(items, forKey: .items)
     }
-    
     
 }
 

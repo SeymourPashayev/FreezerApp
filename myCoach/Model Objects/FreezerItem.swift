@@ -6,12 +6,18 @@
 //
 
 import Foundation
+import CloudKit
+
+let encoder = JSONEncoder();
+let decoder = JSONDecoder();
 
 // FreezerItem Object Itself
-class FreezerItem: Identifiable, ObservableObject, Codable{
+class FreezerItem: Identifiable, ObservableObject, Codable {
     var id = UUID();
-    @Published var title: String;
+    @Published var title: String
     @Published var expirationDate: String;
+    
+    
     //TODO: Figure out a way to use date instead of a string here
     //TODO: Research how barcodes work and how to add an item based on barcode
     

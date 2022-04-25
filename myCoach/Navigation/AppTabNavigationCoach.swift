@@ -23,6 +23,8 @@ struct AppTabNavigationCoach: View {
     
     @State private var selection: Tab = .dashboard
     
+    @StateObject var freezer = Freezer(freezerName: "Freezer")
+    
     var body: some View {
         TabView(selection: $selection){
             
@@ -57,7 +59,8 @@ struct AppTabNavigationCoach: View {
             
             // Backlog Navigation
             NavigationView {
-                FreezerView()
+                // Pass the @EnvironmentObject to freezerView
+                FreezerView().environmentObject(freezer)
             }
             .tabItem{
                 let menuText = Text("Freezer", comment: "List of all freezer items")
