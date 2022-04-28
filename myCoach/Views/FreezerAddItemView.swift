@@ -36,7 +36,9 @@ struct FreezerAddItemView: View {
                         .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 }
             }
-         .onDisappear{
+            .navigationBarTitle("Add an Item")
+         
+            .onDisappear{
          leaveScreen()
          dismiss()
          }

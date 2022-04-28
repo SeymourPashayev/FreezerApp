@@ -23,15 +23,11 @@ struct AppTabNavigationCoach: View {
     
     @State private var selection: Tab = .dashboard
     
-    @StateObject var freezer = Freezer(freezerName: "Freezer")
-    
     var body: some View {
         TabView(selection: $selection){
             
-            // Dashboard Navigation
-            NavigationView {
-                RecentlyAddedView()
-            }
+            // Recently Added Navigation
+            RecentlyAddedView()
             .tabItem{
                 let menuText = Text("Recent", comment: "Recently Added")
                 Label {
@@ -42,11 +38,10 @@ struct AppTabNavigationCoach: View {
             }
             .tag(Tab.recentlyAdded)
             
+            //! Recently Added Navigation
             
-            // Trainees Navigation
-            NavigationView {
-                DashboardView()
-            }
+            // Dashboard Navigation
+            DashboardView()
             .tabItem{
                 let menuText = Text("Dashboard", comment: "List of all items soon to expire")
                 Label {
@@ -57,11 +52,12 @@ struct AppTabNavigationCoach: View {
             }
             .tag(Tab.dashboard)
             
-            // Backlog Navigation
-            NavigationView {
-                // Pass the @EnvironmentObject to freezerView
-                FreezerView().environmentObject(freezer)
-            }
+            //! Dashboard Navigation
+            
+            
+            // FreezerView Navigation
+            // Pass the @EnvironmentObject to freezerView
+            FreezerView()
             .tabItem{
                 let menuText = Text("Freezer", comment: "List of all freezer items")
                 Label {
@@ -72,6 +68,7 @@ struct AppTabNavigationCoach: View {
             }
             .tag(Tab.freezer)
             
+            //! FreezerView Navigation
         }
     }
 }

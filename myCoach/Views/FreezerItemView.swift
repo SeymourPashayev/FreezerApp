@@ -36,25 +36,27 @@ struct FreezerItemView: View {
     
     
     var body: some View {
-        VStack{
-            Form{
-                
-                TextField("Title", text: $title)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+            VStack{
+                Form{
                     
-                TextField("ExpirationDate", text: $expDate)
-                    .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-                
-            }
-            // Load the item data into the view as it appears
-            .onAppear{
+                    TextField("Title", text: $title)
+                        .padding(.all)
+                        
+                    TextField("ExpirationDate", text: $expDate)
+                        .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+                    
+                }
+                .navigationBarTitle("Edit Item")
+                // Load the item data into the view as it appears
+                .onDisappear{
+                    leaveScreen()
+                    // Dismiss the sheet with the help of the @Environment
+                    dismiss()
+                }
+            } .onLoad{
                 fetchItemData()
-            }.onDisappear{
-                leaveScreen()
-                // Dismiss the sheet with the help of the @Environment
-                dismiss()
             }
-        }
+            
     }
 }
 
