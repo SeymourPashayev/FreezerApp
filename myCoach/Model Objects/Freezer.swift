@@ -5,6 +5,8 @@
 //  Created by Seymour Pashayev on 4/22/22.
 //
 
+// Test comment to see if git worked
+
 import Foundation
 
 class Freezer: ObservableObject, Codable {
